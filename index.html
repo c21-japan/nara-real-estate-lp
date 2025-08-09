@@ -328,10 +328,123 @@
             margin-top: 5px;
         }
         
+        /* 代表プロフィールセクション */
+        .president-section {
+            padding: 80px 0;
+            background: white;
+        }
+        
+        .president-content {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 60px;
+            align-items: center;
+        }
+        
+        .president-image-container {
+            text-align: center;
+        }
+        
+        .president-image {
+            width: 100%;
+            max-width: 280px;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            margin: 0 auto;
+        }
+        
+        .president-badge {
+            background: #A19276;
+            color: white;
+            padding: 8px 20px;
+            border-radius: 4px;
+            font-weight: bold;
+            font-size: 14px;
+            margin-top: 20px;
+            display: inline-block;
+        }
+        
+        .president-text {
+            padding: 20px;
+        }
+        
+        .president-title {
+            font-size: 32px;
+            font-weight: 900;
+            color: #383635;
+            margin-bottom: 10px;
+        }
+        
+        .president-subtitle {
+            color: #A19276;
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 30px;
+        }
+        
+        .president-message {
+            color: #383635;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+        
+        .president-highlight {
+            background: linear-gradient(transparent 60%, rgba(161, 146, 118, 0.2) 60%);
+            font-weight: bold;
+            color: #A19276;
+            padding: 2px 4px;
+        }
+        
+        .president-points {
+            background: #f8f7f5;
+            border-left: 4px solid #A19276;
+            padding: 20px;
+            margin: 30px 0;
+        }
+        
+        .president-point {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            margin-bottom: 15px;
+            color: #383635;
+        }
+        
+        .president-point:last-child {
+            margin-bottom: 0;
+        }
+        
+        .point-icon {
+            color: #A19276;
+            font-weight: bold;
+            font-size: 20px;
+            line-height: 1;
+        }
+        
+        .president-cta {
+            background: #ff6b6b;
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            margin-top: 30px;
+        }
+        
+        .president-cta-title {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        
+        .president-cta-text {
+            font-size: 14px;
+        }
+        
         /* 選ばれる理由（KPI強化版） */
         .why-choose {
             padding: 80px 0;
-            background: white;
+            background: #f8f7f5;
         }
         
         .section-header {
@@ -416,7 +529,7 @@
         
         /* 査定システム詳細 */
         .assessment-system {
-            background: #f8f7f5;
+            background: white;
             padding: 80px 0;
         }
         
@@ -484,7 +597,7 @@
         /* 売却方法比較表 */
         .methods-comparison {
             padding: 80px 0;
-            background: white;
+            background: #f8f7f5;
         }
         
         .comparison-table {
@@ -538,7 +651,7 @@
         
         /* 実績・事例 */
         .case-studies {
-            background: #f8f7f5;
+            background: white;
             padding: 80px 0;
         }
         
@@ -555,10 +668,12 @@
             overflow: hidden;
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
             transition: transform 0.3s ease;
+            border: 1px solid #e5e5e5;
         }
         
         .case-card:hover {
             transform: translateY(-5px);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.15);
         }
         
         .case-content {
@@ -627,7 +742,7 @@
         
         /* キャラクターセクション */
         .character-section {
-            background: white;
+            background: #f8f7f5;
             padding: 60px 0;
             text-align: center;
         }
@@ -952,6 +1067,10 @@
                 grid-template-columns: repeat(2, 1fr);
             }
             
+            .president-content {
+                grid-template-columns: 1fr;
+            }
+            
             .kpi-cards {
                 grid-template-columns: 1fr;
             }
@@ -1015,7 +1134,7 @@
 <body>
     <!-- 緊急訴求バー -->
     <div class="urgency-bar">
-        📢 【期間限定】今なら査定申込みで「売却成功ガイドブック」プレゼント！残り3日
+        📢 【期間限定】今なら査定申込みで「奈良の乾社長が訪問査定」実施中！残り3日
     </div>
 
     <!-- Header -->
@@ -1121,6 +1240,50 @@
                     <div class="badge-number">40年以上</div>
                     <div class="badge-label">信頼の実績</div>
                     <div class="badge-note">※創業1983年</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 代表プロフィールセクション -->
+    <section class="president-section">
+        <div class="container">
+            <div class="president-content">
+                <div class="president-image-container">
+                    <img src="family_inui.png" alt="乾代表" class="president-image">
+                    <div class="president-badge">代表取締役 乾 佑企</div>
+                </div>
+                <div class="president-text">
+                    <h2 class="president-title">なぜ私が直接査定するのか</h2>
+                    <p class="president-subtitle">12年間、奈良の不動産売却と向き合ってきた理由</p>
+                    
+                    <p class="president-message">
+                        私は20歳で不動産会社を創業し、現在32歳。地域のお客様の売却と真剣に向き合い、12年間、<span class="president-highlight">高値・スピード・安全性</span>のすべてにこだわってきました。
+                    </p>
+                    
+                    <p class="president-message">
+                        <strong>"家は、家族の人生を支える資産"</strong>。私にも大切な家族がいるからこそ、売主様の立場で<span class="president-highlight">「10万円でも高く」「一日でも早く」「トラブルなく安全に」</span>を徹底します。
+                    </p>
+                    
+                    <div class="president-points">
+                        <div class="president-point">
+                            <span class="point-icon">✓</span>
+                            <span>仲介だけでなく、買取再販・リフォームまで一気通貫で提案</span>
+                        </div>
+                        <div class="president-point">
+                            <span class="point-icon">✓</span>
+                            <span>相場比較・販売戦略・内装の磨き上げ・広告導線・価格調整のタイミング――すべてを代表の私が直轄でリード</span>
+                        </div>
+                        <div class="president-point">
+                            <span class="point-icon">✓</span>
+                            <span>結果にコミットする経営者が直接対応</span>
+                        </div>
+                    </div>
+                    
+                    <div class="president-cta">
+                        <div class="president-cta-title">奈良県で有能な営業マンは一括査定サイトから見つける事は不可能です</div>
+                        <div class="president-cta-text">有能な営業マンは普段から忙しいので、彼らの連絡先を知っている私を利用するのが１番効率的です。</div>
+                    </div>
                 </div>
             </div>
         </div>
