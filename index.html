@@ -64,6 +64,21 @@
             object-fit: contain;
         }
         
+        /* ロゴのテキスト部分 */
+        .logo-text {
+            display: block;
+        }
+        
+        .logo-text .company-name {
+            font-weight: bold;
+            color: #383635;
+        }
+        
+        .logo-text .company-subtitle {
+            font-size: 12px;
+            color: #666;
+        }
+        
         .header-cta {
             display: flex;
             align-items: center;
@@ -1051,6 +1066,20 @@
         
         /* レスポンシブ */
         @media (max-width: 768px) {
+            .header {
+                padding: 8px 0;
+            }
+            
+            .logo img {
+                height: 35px;
+                max-width: 120px;
+            }
+            
+            /* スマホ表示時はロゴのテキスト部分を非表示 */
+            .logo-text {
+                display: none;
+            }
+            
             .hero h1 {
                 font-size: 28px;
             }
@@ -1092,7 +1121,6 @@
             }
             
             .header-cta {
-                flex-direction: column;
                 gap: 10px;
             }
             
@@ -1101,12 +1129,26 @@
             }
             
             .phone-btn {
-                padding: 10px 20px;
+                padding: 10px 16px;
                 font-size: 14px;
             }
         }
         
         @media (max-width: 480px) {
+            .header {
+                padding: 6px 0;
+            }
+            
+            .logo img {
+                height: 30px;
+                max-width: 100px;
+            }
+            
+            .phone-btn {
+                padding: 8px 12px;
+                font-size: 13px;
+            }
+            
             .hero h1 {
                 font-size: 24px;
             }
@@ -1143,9 +1185,9 @@
             <div class="header-content">
                 <div class="logo">
                     <img src="century21logo_gold.png" alt="センチュリー21">
-                    <div>
-                        <div style="font-weight: bold; color: #383635;">センチュリー21ホームマート</div>
-                        <div style="font-size: 12px; color: #666;">奈良県の不動産売却専門店</div>
+                    <div class="logo-text">
+                        <div class="company-name">センチュリー21ホームマート</div>
+                        <div class="company-subtitle">奈良県の不動産売却専門店</div>
                     </div>
                 </div>
                 <div class="header-cta">
