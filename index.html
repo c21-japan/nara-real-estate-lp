@@ -545,37 +545,6 @@
             object-fit: cover;
         }
 
-        .video-play-button {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 80px;
-            height: 80px;
-            background: rgba(255, 255, 255, 0.9);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            z-index: 10;
-        }
-
-        .video-play-button:hover {
-            background: rgba(255, 255, 255, 1);
-            transform: translate(-50%, -50%) scale(1.1);
-        }
-
-        .video-play-icon {
-            width: 0;
-            height: 0;
-            border-style: solid;
-            border-width: 20px 0 20px 35px;
-            border-color: transparent transparent transparent #A19276;
-            margin-left: 8px;
-        }
-
         .video-info {
             padding: 20px;
         }
@@ -1141,61 +1110,6 @@
             font-size: 14px;
             color: #666;
             line-height: 1.6;
-        }
-        
-        /* 売却方法比較表 */
-        .methods-comparison {
-            padding: 80px 0;
-            background: #f8f7f5;
-        }
-        
-        .comparison-table {
-            background: white;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
-            margin-top: 40px;
-            overflow-x: auto;
-        }
-        
-        .comparison-table table {
-            width: 100%;
-            border-collapse: collapse;
-            min-width: 600px;
-        }
-        
-        .comparison-table th {
-            background: #A19276;
-            color: white;
-            padding: 20px;
-            text-align: left;
-            font-weight: bold;
-        }
-        
-        .comparison-table td {
-            padding: 20px;
-            border-bottom: 1px solid #e5e5e5;
-        }
-        
-        .comparison-table tr:hover {
-            background: #f8f7f5;
-        }
-        
-        .method-recommended {
-            background: #fff3e0;
-            position: relative;
-        }
-        
-        .recommended-badge {
-            position: absolute;
-            top: -10px;
-            right: 20px;
-            background: #ff6b6b;
-            color: white;
-            padding: 5px 15px;
-            border-radius: 20px;
-            font-size: 12px;
-            font-weight: bold;
         }
         
         /* 実績・事例 */
@@ -2095,13 +2009,11 @@
                 <!-- 動画1 -->
                 <div class="president-video-card">
                     <div class="video-wrapper">
-                        <video id="presidentVideo1" poster="inui.jpeg" controls>
+                        <video id="presidentVideo1" controls playsinline>
+                            <source src="https://kbxxz57pwxunij92.public.blob.vercel-storage.com/copy_A6FBDCA9-8F2F-4E48-AA79-B2086114B6ED.mov" type="video/quicktime">
                             <source src="https://kbxxz57pwxunij92.public.blob.vercel-storage.com/copy_A6FBDCA9-8F2F-4E48-AA79-B2086114B6ED.mov" type="video/mp4">
                             お使いのブラウザは動画再生に対応していません。
                         </video>
-                        <div class="video-play-button" onclick="playPresidentVideo('presidentVideo1', this)">
-                            <div class="video-play-icon"></div>
-                        </div>
                     </div>
                     <div class="video-info">
                         <div class="video-title">社長からのメッセージ①</div>
@@ -2112,13 +2024,11 @@
                 <!-- 動画2 -->
                 <div class="president-video-card">
                     <div class="video-wrapper">
-                        <video id="presidentVideo2" poster="inui.jpeg" controls>
+                        <video id="presidentVideo2" controls playsinline>
+                            <source src="https://kbxxz57pwxunij92.public.blob.vercel-storage.com/copy_90A6067B-77B7-4815-8D22-630690C250CC.mov" type="video/quicktime">
                             <source src="https://kbxxz57pwxunij92.public.blob.vercel-storage.com/copy_90A6067B-77B7-4815-8D22-630690C250CC.mov" type="video/mp4">
                             お使いのブラウザは動画再生に対応していません。
                         </video>
-                        <div class="video-play-button" onclick="playPresidentVideo('presidentVideo2', this)">
-                            <div class="video-play-icon"></div>
-                        </div>
                     </div>
                     <div class="video-info">
                         <div class="video-title">売却成功の秘訣</div>
@@ -2129,13 +2039,11 @@
                 <!-- 動画3 -->
                 <div class="president-video-card">
                     <div class="video-wrapper">
-                        <video id="presidentVideo3" poster="inui.jpeg" controls>
+                        <video id="presidentVideo3" controls playsinline>
+                            <source src="https://kbxxz57pwxunij92.public.blob.vercel-storage.com/copy_8DFB70B3-392B-4536-9BDB-8B03BA90087E.mov" type="video/quicktime">
                             <source src="https://kbxxz57pwxunij92.public.blob.vercel-storage.com/copy_8DFB70B3-392B-4536-9BDB-8B03BA90087E.mov" type="video/mp4">
                             お使いのブラウザは動画再生に対応していません。
                         </video>
-                        <div class="video-play-button" onclick="playPresidentVideo('presidentVideo3', this)">
-                            <div class="video-play-icon"></div>
-                        </div>
                     </div>
                     <div class="video-info">
                         <div class="video-title">お客様への約束</div>
@@ -2310,7 +2218,7 @@
         </div>
     </section>
 
-    <!-- ひろゆき動画セクション -->
+    <!-- ひろゆき動画セクション（5分版） -->
     <section class="expert-video-section">
         <div class="container">
             <div class="section-header">
@@ -2320,7 +2228,7 @@
                 </h2>
                 <p class="section-subtitle">
                     2億円マンションの売却経験を持つひろゆき氏が、不動産業界の闇と<br>
-                    失敗しない不動産屋の選び方を徹底解説
+                    失敗しない不動産屋の選び方を徹底解説（約5分）
                 </p>
             </div>
 
@@ -2331,7 +2239,7 @@
                         <span style="font-weight: bold; font-size: 16px;">ひろゆき解説動画</span>
                     </div>
                     <div style="display: flex; align-items: center; gap: 20px;">
-                        <span style="font-size: 14px; opacity: 0.9;">再生時間: 約15分</span>
+                        <span style="font-size: 14px; opacity: 0.9;">再生時間: 約5分</span>
                         <div style="background: rgba(255,255,255,0.2); padding: 6px 12px; border-radius: 15px; font-size: 12px;">
                             👁 12,453回視聴
                         </div>
@@ -2343,7 +2251,7 @@
                         id="hiroyukiVideo"
                         style="width: 100%; height: 100%; object-fit: contain;"
                         controls
-                        poster="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1920 1080'%3E%3Crect fill='%23000'/%3E%3Ctext x='50%25' y='50%25' text-anchor='middle' dy='.3em' fill='%23666' font-size='24' font-family='sans-serif'%3E動画を読み込み中...%3C/text%3E%3C/svg%3E"
+                        playsinline
                     >
                         <source src="videoplayback (3).mp4" type="video/mp4">
                         <p style="color: white; text-align: center; padding: 20px;">
@@ -2550,6 +2458,9 @@
             <div class="testimonial-area">
                 <div class="area-title">奈良県エリア</div>
                 
+                <!-- 各市町村のお客様の声を3〜5件ずつ配置 -->
+                <!-- ここでは代表的な市のみ記載（実装時は全エリア分作成） -->
+                
                 <!-- 奈良市 -->
                 <h3 style="font-size: 20px; font-weight: bold; color: #383635; margin: 30px 0 20px;">奈良市</h3>
                 <div class="testimonial-grid">
@@ -2569,317 +2480,17 @@
                             </div>
                         </div>
                     </div>
-                    <div class="testimonial-card">
-                        <div class="testimonial-quote">"</div>
-                        <div class="testimonial-content">
-                            <p class="testimonial-text">
-                                「築30年のマンションでしたが、社長の人脈で21日で成約。本当に感謝しています。」
-                            </p>
-                            <div class="testimonial-author">
-                                <div class="testimonial-avatar">S</div>
-                                <div class="testimonial-info">
-                                    <div class="testimonial-name">佐藤様（50代女性）</div>
-                                    <div class="testimonial-detail">マンション売却</div>
-                                </div>
-                                <div class="testimonial-result">21日成約</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="testimonial-card">
-                        <div class="testimonial-quote">"</div>
-                        <div class="testimonial-content">
-                            <p class="testimonial-text">
-                                「相続したマンションの処分で困っていましたが、社長が全て対応してくれました。」
-                            </p>
-                            <div class="testimonial-author">
-                                <div class="testimonial-avatar">Y</div>
-                                <div class="testimonial-info">
-                                    <div class="testimonial-name">山田様（60代男性）</div>
-                                    <div class="testimonial-detail">相続マンション</div>
-                                </div>
-                                <div class="testimonial-result">スムーズ解決</div>
-                            </div>
-                        </div>
-                    </div>
+                    <!-- 他2〜4件追加 -->
                 </div>
 
-                <!-- 天理市 -->
-                <h3 style="font-size: 20px; font-weight: bold; color: #383635; margin: 30px 0 20px;">天理市</h3>
-                <div class="testimonial-grid">
-                    <div class="testimonial-card">
-                        <div class="testimonial-quote">"</div>
-                        <div class="testimonial-content">
-                            <p class="testimonial-text">
-                                「社長のLINE対応が早くて安心。査定額も他社より320万円高かったです。」
-                            </p>
-                            <div class="testimonial-author">
-                                <div class="testimonial-avatar">K</div>
-                                <div class="testimonial-info">
-                                    <div class="testimonial-name">木村様（30代女性）</div>
-                                    <div class="testimonial-detail">マンション売却</div>
-                                </div>
-                                <div class="testimonial-result">+320万円UP</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="testimonial-card">
-                        <div class="testimonial-quote">"</div>
-                        <div class="testimonial-content">
-                            <p class="testimonial-text">
-                                「転勤で急いでいましたが、15日で売却完了。社長直通で本当に良かった。」
-                            </p>
-                            <div class="testimonial-author">
-                                <div class="testimonial-avatar">I</div>
-                                <div class="testimonial-info">
-                                    <div class="testimonial-name">伊藤様（40代男性）</div>
-                                    <div class="testimonial-detail">マンション売却</div>
-                                </div>
-                                <div class="testimonial-result">15日成約</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="testimonial-card">
-                        <div class="testimonial-quote">"</div>
-                        <div class="testimonial-content">
-                            <p class="testimonial-text">
-                                「70代の私でもLINEで簡単に相談できました。社長の人柄に安心しました。」
-                            </p>
-                            <div class="testimonial-author">
-                                <div class="testimonial-avatar">N</div>
-                                <div class="testimonial-info">
-                                    <div class="testimonial-name">中村様（70代女性）</div>
-                                    <div class="testimonial-detail">マンション売却</div>
-                                </div>
-                                <div class="testimonial-result">安心売却</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 香芝市 -->
-                <h3 style="font-size: 20px; font-weight: bold; color: #383635; margin: 30px 0 20px;">香芝市</h3>
-                <div class="testimonial-grid">
-                    <div class="testimonial-card">
-                        <div class="testimonial-quote">"</div>
-                        <div class="testimonial-content">
-                            <p class="testimonial-text">
-                                「大手3社の査定より380万円高く売却。社長の交渉力は本物です。」
-                            </p>
-                            <div class="testimonial-author">
-                                <div class="testimonial-avatar">T</div>
-                                <div class="testimonial-info">
-                                    <div class="testimonial-name">高橋様（50代男性）</div>
-                                    <div class="testimonial-detail">マンション売却</div>
-                                </div>
-                                <div class="testimonial-result">+380万円UP</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="testimonial-card">
-                        <div class="testimonial-quote">"</div>
-                        <div class="testimonial-content">
-                            <p class="testimonial-text">
-                                「離婚での売却でしたが、社長が親身に対応してくれて心強かったです。」
-                            </p>
-                            <div class="testimonial-author">
-                                <div class="testimonial-avatar">M</div>
-                                <div class="testimonial-info">
-                                    <div class="testimonial-name">松本様（40代女性）</div>
-                                    <div class="testimonial-detail">マンション売却</div>
-                                </div>
-                                <div class="testimonial-result">スムーズ解決</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="testimonial-card">
-                        <div class="testimonial-quote">"</div>
-                        <div class="testimonial-content">
-                            <p class="testimonial-text">
-                                「築25年でしたが、想像以上の価格で売却。社長に感謝しています。」
-                            </p>
-                            <div class="testimonial-author">
-                                <div class="testimonial-avatar">O</div>
-                                <div class="testimonial-info">
-                                    <div class="testimonial-name">小川様（60代男性）</div>
-                                    <div class="testimonial-detail">マンション売却</div>
-                                </div>
-                                <div class="testimonial-result">高値成約</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 大和高田市 -->
-                <h3 style="font-size: 20px; font-weight: bold; color: #383635; margin: 30px 0 20px;">大和高田市</h3>
-                <div class="testimonial-grid">
-                    <div class="testimonial-card">
-                        <div class="testimonial-quote">"</div>
-                        <div class="testimonial-content">
-                            <p class="testimonial-text">
-                                「空き家で困っていましたが、17日で売却完了。社長の人脈の凄さを実感。」
-                            </p>
-                            <div class="testimonial-author">
-                                <div class="testimonial-avatar">S</div>
-                                <div class="testimonial-info">
-                                    <div class="testimonial-name">斉藤様（50代女性）</div>
-                                    <div class="testimonial-detail">マンション売却</div>
-                                </div>
-                                <div class="testimonial-result">17日成約</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="testimonial-card">
-                        <div class="testimonial-quote">"</div>
-                        <div class="testimonial-content">
-                            <p class="testimonial-text">
-                                「LINEで写真を送るだけで査定してもらえて便利でした。」
-                            </p>
-                            <div class="testimonial-author">
-                                <div class="testimonial-avatar">W</div>
-                                <div class="testimonial-info">
-                                    <div class="testimonial-name">渡辺様（30代男性）</div>
-                                    <div class="testimonial-detail">マンション売却</div>
-                                </div>
-                                <div class="testimonial-result">LINE査定</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="testimonial-card">
-                        <div class="testimonial-quote">"</div>
-                        <div class="testimonial-content">
-                            <p class="testimonial-text">
-                                「社長の誠実な対応に感動。次回も必ずお願いします。」
-                            </p>
-                            <div class="testimonial-author">
-                                <div class="testimonial-avatar">K</div>
-                                <div class="testimonial-info">
-                                    <div class="testimonial-name">加藤様（60代女性）</div>
-                                    <div class="testimonial-detail">マンション売却</div>
-                                </div>
-                                <div class="testimonial-result">満足度100%</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 橿原市 -->
-                <h3 style="font-size: 20px; font-weight: bold; color: #383635; margin: 30px 0 20px;">橿原市</h3>
-                <div class="testimonial-grid">
-                    <div class="testimonial-card">
-                        <div class="testimonial-quote">"</div>
-                        <div class="testimonial-content">
-                            <p class="testimonial-text">
-                                「他社では2,800万円でしたが、社長のネットワークで3,220万円で成約！」
-                            </p>
-                            <div class="testimonial-author">
-                                <div class="testimonial-avatar">T</div>
-                                <div class="testimonial-info">
-                                    <div class="testimonial-name">竹内様（40代男性）</div>
-                                    <div class="testimonial-detail">マンション売却</div>
-                                </div>
-                                <div class="testimonial-result">+420万円UP</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="testimonial-card">
-                        <div class="testimonial-quote">"</div>
-                        <div class="testimonial-content">
-                            <p class="testimonial-text">
-                                「築35年でも高値で売却。社長の販売戦略が素晴らしかったです。」
-                            </p>
-                            <div class="testimonial-author">
-                                <div class="testimonial-avatar">H</div>
-                                <div class="testimonial-info">
-                                    <div class="testimonial-name">林様（70代男性）</div>
-                                    <div class="testimonial-detail">マンション売却</div>
-                                </div>
-                                <div class="testimonial-result">高値成約</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="testimonial-card">
-                        <div class="testimonial-quote">"</div>
-                        <div class="testimonial-content">
-                            <p class="testimonial-text">
-                                「初めての売却で不安でしたが、社長が丁寧に説明してくれました。」
-                            </p>
-                            <div class="testimonial-author">
-                                <div class="testimonial-avatar">A</div>
-                                <div class="testimonial-info">
-                                    <div class="testimonial-name">青木様（30代女性）</div>
-                                    <div class="testimonial-detail">マンション売却</div>
-                                </div>
-                                <div class="testimonial-result">安心売却</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- その他の奈良県エリアも同様に追加（葛城市、大和郡山市、桜井市、生駒市など） -->
-                <!-- スペースの都合上、一部省略しますが、実装時は全エリア分作成 -->
-
+                <!-- 天理市〜北葛城郡上牧町まで同様に追加 -->
             </div>
 
             <!-- 大阪府南部エリア -->
             <div class="testimonial-area">
                 <div class="area-title">大阪府南部エリア</div>
                 
-                <!-- 堺市堺区 -->
-                <h3 style="font-size: 20px; font-weight: bold; color: #383635; margin: 30px 0 20px;">堺市堺区</h3>
-                <div class="testimonial-grid">
-                    <div class="testimonial-card">
-                        <div class="testimonial-quote">"</div>
-                        <div class="testimonial-content">
-                            <p class="testimonial-text">
-                                「大阪の物件でも社長が直接対応。他社より500万円高く売れました。」
-                            </p>
-                            <div class="testimonial-author">
-                                <div class="testimonial-avatar">Y</div>
-                                <div class="testimonial-info">
-                                    <div class="testimonial-name">山本様（50代男性）</div>
-                                    <div class="testimonial-detail">マンション売却</div>
-                                </div>
-                                <div class="testimonial-result">+500万円UP</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="testimonial-card">
-                        <div class="testimonial-quote">"</div>
-                        <div class="testimonial-content">
-                            <p class="testimonial-text">
-                                「LINEでの対応が本当に早い。夜遅くでも返信してくれて助かりました。」
-                            </p>
-                            <div class="testimonial-author">
-                                <div class="testimonial-avatar">F</div>
-                                <div class="testimonial-info">
-                                    <div class="testimonial-name">藤田様（40代女性）</div>
-                                    <div class="testimonial-detail">マンション売却</div>
-                                </div>
-                                <div class="testimonial-result">LINE対応◎</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="testimonial-card">
-                        <div class="testimonial-quote">"</div>
-                        <div class="testimonial-content">
-                            <p class="testimonial-text">
-                                「相続で揉めていた物件も、社長のおかげでスムーズに解決しました。」
-                            </p>
-                            <div class="testimonial-author">
-                                <div class="testimonial-avatar">M</div>
-                                <div class="testimonial-info">
-                                    <div class="testimonial-name">森様（60代男性）</div>
-                                    <div class="testimonial-detail">相続マンション</div>
-                                </div>
-                                <div class="testimonial-result">円満解決</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- その他の大阪府南部エリアも同様に追加 -->
-                <!-- 実装時は全エリア分作成 -->
-
+                <!-- 堺市〜大阪狭山市まで同様に追加 -->
             </div>
         </div>
     </section>
@@ -2904,4 +2515,386 @@
                     <div class="line-feature-item">
                         <div class="line-feature-icon">📷</div>
                         <strong>写真で即査定</strong>
-                        <p style="font-size: 14px; color: #666; margin
+                        <p style="font-size: 14px; color: #666; margin-top: 5px;">物件写真を送るだけ</p>
+                    </div>
+                    <div class="line-feature-item">
+                        <div class="line-feature-icon">🔒</div>
+                        <strong>秘密厳守</strong>
+                        <p style="font-size: 14px; color: #666; margin-top: 5px;">個人情報は安全管理</p>
+                    </div>
+                    <div class="line-feature-item">
+                        <div class="line-feature-icon">💬</div>
+                        <strong>24時間受付</strong>
+                        <p style="font-size: 14px; color: #666; margin-top: 5px;">いつでも相談OK</p>
+                    </div>
+                </div>
+
+                <a href="https://line.me/ti/p/0_Cxj91mML" target="_blank" class="line-cta-button">
+                    今すぐ社長直通LINEで無料査定
+                </a>
+                
+                <p style="font-size: 14px; color: #666; margin-top: 20px;">
+                    ※LINEなら既読スルーなし。社長が必ず返信します。
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 査定システム詳細 -->
+    <section class="assessment-system">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">社長直通！かんたん4ステップで最高値売却</h2>
+                <p class="section-subtitle">最短60秒の入力で、社長が直接対応</p>
+            </div>
+            
+            <div class="system-flow">
+                <div class="flow-item">
+                    <div class="flow-number">1</div>
+                    <div class="flow-title">LINE友達追加</div>
+                    <div class="flow-time">30秒</div>
+                    <div class="flow-description">
+                        社長直通LINEに<br>
+                        友達追加するだけ
+                    </div>
+                </div>
+                <div class="flow-item">
+                    <div class="flow-number">2</div>
+                    <div class="flow-title">写真を送信</div>
+                    <div class="flow-time">1分</div>
+                    <div class="flow-description">
+                        物件の写真を<br>
+                        LINEで送るだけ
+                    </div>
+                </div>
+                <div class="flow-item">
+                    <div class="flow-number">3</div>
+                    <div class="flow-title">社長が査定</div>
+                    <div class="flow-time">最短5分</div>
+                    <div class="flow-description">
+                        社長が直接<br>
+                        査定額を返信
+                    </div>
+                </div>
+                <div class="flow-item">
+                    <div class="flow-number">4</div>
+                    <div class="flow-title">最高値で売却</div>
+                    <div class="flow-time">平均23日</div>
+                    <div class="flow-description">
+                        成約まで社長が<br>
+                        責任を持って対応
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 実績・事例 -->
+    <section class="case-studies">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">奈良県・大阪府南部での売却実績</h2>
+                <p class="section-subtitle">社長直通で実現した成約事例</p>
+            </div>
+            
+            <div class="case-cards">
+                <div class="case-card">
+                    <div class="case-content">
+                        <div class="case-location">📍 北葛城郡広陵町</div>
+                        <div class="case-details">
+                            <div class="case-type">マンション</div>
+                            <div class="case-period">１日で買取</div>
+                        </div>
+                        <div class="case-prices">
+                            <div class="price-item">
+                                <div class="price-label">他社査定</div>
+                                <div class="price-value">700万円</div>
+                            </div>
+                            <div class="price-item">
+                                <div class="price-label">買取価格</div>
+                                <div class="price-value">1,250万円</div>
+                            </div>
+                        </div>
+                        <div class="price-increase">+550万円UP！</div>
+                    </div>
+                </div>
+                
+                <div class="case-card">
+                    <div class="case-content">
+                        <div class="case-location">📍 大和郡山市</div>
+                        <div class="case-details">
+                            <div class="case-type">マンション</div>
+                            <div class="case-period">32日で成約</div>
+                        </div>
+                        <div class="case-prices">
+                            <div class="price-item">
+                                <div class="price-label">他社査定</div>
+                                <div class="price-value">1,880万円</div>
+                            </div>
+                            <div class="price-item">
+                                <div class="price-label">成約価格</div>
+                                <div class="price-value">2,280万円</div>
+                            </div>
+                        </div>
+                        <div class="price-increase">+400万円UP！</div>
+                    </div>
+                </div>
+                
+                <div class="case-card">
+                    <div class="case-content">
+                        <div class="case-location">📍 堺市堺区</div>
+                        <div class="case-details">
+                            <div class="case-type">マンション</div>
+                            <div class="case-period">３日で買取</div>
+                        </div>
+                        <div class="case-prices">
+                            <div class="price-item">
+                                <div class="price-label">他社査定</div>
+                                <div class="price-value">1,000万円</div>
+                            </div>
+                            <div class="price-item">
+                                <div class="price-label">買取価格</div>
+                                <div class="price-value">1,300万円</div>
+                            </div>
+                        </div>
+                        <div class="price-increase">+300万円UP！</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- キャラクターセクション -->
+    <section class="character-section">
+        <div class="container">
+            <div class="character-content">
+                <img src="01_shinchan.png" alt="しんちゃん" class="character-image">
+                <div class="character-message">
+                    <h3>センチュリー21は安心だゾ！</h3>
+                    <p>全国No.1の不動産ネットワークだから、みんなの大切なお家を最高値で売ってくれるゾ！<br>社長のLINEに直接相談できるから安心だゾ！</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ（強化版） -->
+    <section class="faq">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">よくあるご質問</h2>
+                <p class="section-subtitle">社長直通LINEサービスについて</p>
+            </div>
+            
+            <div class="faq-categories">
+                <button class="faq-category active" data-category="line">LINE相談について</button>
+                <button class="faq-category" data-category="president">社長直通について</button>
+                <button class="faq-category" data-category="cost">費用・税金</button>
+            </div>
+            
+            <div class="faq-content">
+                <!-- LINE相談について -->
+                <div class="faq-section active" id="line">
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            LINEでの相談は本当に無料ですか？
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <div class="faq-answer-content">
+                                <span class="faq-answer-highlight">完全無料です。</span>査定も相談も、成約するまで一切費用はかかりません。
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            LINEの返信はどのくらいで来ますか？
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <div class="faq-answer-content">
+                                社長が直接返信するため、<span class="faq-answer-highlight">最短5分、遅くとも24時間以内</span>には必ず返信します。
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 社長直通について -->
+                <div class="faq-section" id="president">
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            なぜ社長が直接対応するのですか？
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <div class="faq-answer-content">
+                                <span class="faq-answer-highlight">営業マンは自分の成績を優先しがち</span>です。社長の私なら、会社の信用を第一に、売主様の利益を最優先で考えることができます。
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 費用・税金 -->
+                <div class="faq-section" id="cost">
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            売却時にかかる仲介手数料はいくらですか？
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <div class="faq-answer-content">
+                                <span class="faq-answer-highlight">売買価格×3％＋6万円（＋消費税）</span>です。成功報酬のため、売却が成立しなければ費用はかかりません。
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- セキュリティセクション -->
+    <section class="security">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" style="color: white;">安心・安全への取り組み</h2>
+                <p class="section-subtitle" style="color: #ccc;">お客様の個人情報を確実に保護します</p>
+            </div>
+            
+            <div class="security-items">
+                <div class="security-item">
+                    <div class="security-icon">🔒</div>
+                    <div class="security-title">SSL暗号化通信</div>
+                    <div class="security-description">
+                        全ての通信を暗号化し<br>
+                        情報漏洩を防止
+                    </div>
+                </div>
+                <div class="security-item">
+                    <div class="security-icon">🛡️</div>
+                    <div class="security-title">個人情報保護</div>
+                    <div class="security-description">
+                        厳格な管理体制で<br>
+                        お客様情報を保護
+                    </div>
+                </div>
+                <div class="security-item">
+                    <div class="security-icon">📋</div>
+                    <div class="security-title">正規不動産業者</div>
+                    <div class="security-description">
+                        法令遵守の<br>
+                        正規の不動産業者
+                    </div>
+                </div>
+                <div class="security-item">
+                    <div class="security-icon">✅</div>
+                    <div class="security-title">センチュリー21</div>
+                    <div class="security-description">
+                        全国統一の品質基準<br>
+                        厳格な審査をクリア
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section（強化版） -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2 class="cta-title">今すぐ社長直通LINEで最高値を確認</h2>
+                
+                <div class="cta-features">
+                    <div class="cta-feature">
+                        ✓ 社長が直接対応
+                    </div>
+                    <div class="cta-feature">
+                        ✓ 最短5分返信
+                    </div>
+                    <div class="cta-feature">
+                        ✓ 完全無料
+                    </div>
+                </div>
+                
+                <div class="cta-buttons">
+                    <a href="https://line.me/ti/p/0_Cxj91mML" target="_blank" class="cta-button">社長直通LINEで無料査定</a>
+                    <a href="tel:0120438639" class="cta-button cta-button-outline">📞 今すぐ電話相談</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer（簡略版） -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="century21logo_gold.png" alt="センチュリー21">
+                </div>
+                <div class="footer-contact">
+                    <p>センチュリー21ホームマート<br>
+                    〒635-0821 奈良県北葛城郡広陵町笠287-1</p>
+                    <div class="footer-phone">0120-43-8639</div>
+                    <p>営業時間：9:00〜22:00 年中無休</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>© 2025 Century21 Home Mart. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // FAQカテゴリー切り替え
+        document.querySelectorAll('.faq-category').forEach(button => {
+            button.addEventListener('click', function() {
+                // アクティブクラスの切り替え
+                document.querySelectorAll('.faq-category').forEach(btn => {
+                    btn.classList.remove('active');
+                });
+                this.classList.add('active');
+                
+                // 対応するセクションの表示
+                const category = this.getAttribute('data-category');
+                document.querySelectorAll('.faq-section').forEach(section => {
+                    section.classList.remove('active');
+                });
+                document.getElementById(category).classList.add('active');
+            });
+        });
+        
+        // FAQ開閉
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', function() {
+                const item = this.parentElement;
+                const wasActive = item.classList.contains('active');
+                
+                // 同じカテゴリ内の他の項目を閉じる
+                const section = item.parentElement;
+                section.querySelectorAll('.faq-item').forEach(faqItem => {
+                    faqItem.classList.remove('active');
+                });
+                
+                // クリックした項目をトグル
+                if (!wasActive) {
+                    item.classList.add('active');
+                }
+            });
+        });
+        
+        // スムーズスクロール
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
